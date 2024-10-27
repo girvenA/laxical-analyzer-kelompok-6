@@ -1,7 +1,7 @@
 import ply.lex as lex
 
 # list of token names
-okens = [
+tokens = [
     'PRINT', 'ECHO',
     'IF', 'ELSE', 'WHILE',
     'ID', 'NUMBER', 'STRING',
