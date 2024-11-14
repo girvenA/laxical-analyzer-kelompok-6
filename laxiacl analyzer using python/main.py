@@ -47,7 +47,7 @@ code_3 = '''
 code_4 = '''
 <?php //php 7.2.24
     PRINT "List of Odd Number 1-100:\n";
-    PRINT "\n":
+    PRINT "\n";
     $num = 1; 
     WHILE ($num <= 100) {
         IF (($num % 2) != 0) {
@@ -81,8 +81,8 @@ tokens = keywords + [
     'RPAREN', 
     'RCURLY', 
     'LCURLY', 
-    'LE', 
-    'GT',
+    'LESSEQUAL', 
+    'GREATERTHAN',
     'CONCAT', 
     'SEMI', 
     'NOT', 
@@ -109,7 +109,7 @@ def t_ignore_PHP_CLOSE(t):
 t_ignore_COMMENT =r'//.*'
 
 
-def t_KW(t):
+def t_KEYWORD(t):
     r'[a-zA-Z_][a-zA-Z0-9_]*'
     if t.value in keywords:
         t.type = t.value
@@ -135,8 +135,8 @@ t_LPAREN = r'\('
 t_RPAREN = r'\)'
 t_LCURLY = r'\{'
 t_RCURLY = r'\}'
-t_LE = r'\<='
-t_GT = r'\>'
+t_LESSEQUAL = r'\<='
+t_GREATERTHAN = r'\>'
 t_CONCAT = r'\.'  # Concatenation operator
 t_SEMI = r'\;'
 t_NOT = r'\!'
