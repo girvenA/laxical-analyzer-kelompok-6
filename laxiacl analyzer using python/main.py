@@ -95,7 +95,6 @@ tokens = keywords + [
 # Ignore whitespace
 t_ignore = ' \t'
 
-# Token definitions
 # Ignore PHP tags
 def t_ignore_PHP_OPEN(t):
     r'\<\?php'
@@ -108,9 +107,10 @@ def t_ignore_PHP_CLOSE(t):
 # Ignore comment
 t_ignore_COMMENT =r'//.*'
 
+# Token definitions
 
 def t_KEYWORD(t):
-    r'[a-zA-Z_][a-zA-Z0-9_]*'
+    r'[a-zA-Z_]*'
     if t.value in keywords:
         t.type = t.value
     return t
