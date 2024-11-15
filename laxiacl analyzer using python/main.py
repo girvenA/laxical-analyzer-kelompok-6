@@ -108,9 +108,8 @@ def t_ignore_PHP_CLOSE(t):
 t_ignore_COMMENT =r'//.*'
 
 # Token definitions
-
 def t_KEYWORD(t):
-    r'[a-zA-Z_]*'
+    r'[a-zA-Z_]+'
     if t.value in keywords:
         t.type = t.value
     return t
