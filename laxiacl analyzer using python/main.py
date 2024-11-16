@@ -1,6 +1,6 @@
 # A simple lexical analyzer for PHP source code using PLY
 
-#sample code
+# Sample code
 # Example PHP code snippets to analyze
 
 # Example 1: Simple Print Statements
@@ -138,8 +138,8 @@ t_LESSEQUAL = r'\<='
 t_GREATERTHAN = r'\>'
 t_CONCAT = r'\.'  # Concatenation operator
 t_SEMI = r'\;'
-t_NOT = r'\!'
-t_MOD = r'\%'
+t_NOT = r'\!'  # Not operator
+t_MOD = r'\%'  # Modulo operator
 
 def t_NEWLINE(t):
     r'\n'
